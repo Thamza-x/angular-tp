@@ -1,0 +1,11 @@
+<p>products works!</p>
+<h1>{{ title }}</h1>
+@for (prod of produit; track prod.id){
+    <h3>{{prod.nom}} -prix {{prod.prix}}
+        <img [src]="prod.image" alt="{{prod.nom}}" width="100" height="100">
+       
+    <button [disabled]="!prod.description" (click)="onclick(prod)">
+      Détails
+    </button>
+    </h3>
+}
